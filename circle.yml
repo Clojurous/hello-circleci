@@ -5,7 +5,7 @@ machine:
     version: 3.4.2	
   pre:
     - pip install boto3
-	  - python ./aws-cfn/prepare.py
+    - python ./aws-cfn/prepare.py
     
       
     
