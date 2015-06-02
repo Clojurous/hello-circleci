@@ -8,7 +8,7 @@
                   :exclusions [commons-logging]]
                  [ring/ring-core "1.3.1"]
                  [compojure "1.2.0"]
-                 [com.datomic/datomic-pro "0.9.4956"
+                 [com.datomic/datomic-free "0.9.5173"
                   :exclusions [joda-time]]]
   :plugins [[lein-ring "0.8.12"]]
   ;; To access Datomic's maven repo, set the following environment variables:
