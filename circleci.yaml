@@ -1,0 +1,10 @@
+machine:
+  timezone:
+    Europe/Moscow
+    
+deployment:
+  staging:
+    branch: master
+    codedeploy:
+      hello-circleci:
+        deployment_group: staging-instance-group
