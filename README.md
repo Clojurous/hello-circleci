@@ -1,3 +1,4 @@
+
 clojure-west-2014-demo
 ======================
 
@@ -329,3 +330,4 @@ After the stack is completely deleted, run rm-aws-resources.sh:
 
 These tools _should_ remove AWS resources they created. To be safe, you should
 poke around your AWS console to make sure.
+
