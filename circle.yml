@@ -6,5 +6,5 @@ machine:
   pre:
     - sudo pip install --upgrade pip
     - sudo pip install boto
-    - python $CIRCLE_PROJECT_REPONAME/aws-cfn/prepare.py
+    - python3 $CIRCLE_PROJECT_REPONAME/aws-cfn/prepare.py
       
