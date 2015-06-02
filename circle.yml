@@ -4,7 +4,7 @@ machine:
   python:
     version: 3.4.2	
   pre:
-    - sudo pip install --upgrade pip
-    - sudo pip install boto
+    - sudo pip3 install --upgrade pip
+    - sudo pip3 install boto
     - python3 $CIRCLE_PROJECT_REPONAME/aws-cfn/prepare.py
       
