@@ -5,6 +5,6 @@
 import sys
 import boto
 
-print("Python version: " + sys.version_info)
+print("Python version: %s " % sys.version_info)
 
 
