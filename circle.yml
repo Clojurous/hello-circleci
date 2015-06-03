@@ -5,9 +5,10 @@ machine:
 test:
    post:
      - lein ring uberwar
-     - cp $CIRCLE_PROJECT_REPONAME/target/*war $CIRCLE_ARTIFACTS
     
 deployment:
+  pre:
+     - cp $CIRCLE_PROJECT_REPONAME/target/*war $CIRCLE_ARTIFACTS
   staging:
     branch: master
     codedeploy:
