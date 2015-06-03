@@ -24,6 +24,3 @@
          :auto-reload? false
          :auto-refresh false
          :port 3001})
-
-    :main clj-west
-    :aot [clj-west])

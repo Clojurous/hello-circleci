@@ -4,7 +4,7 @@ machine:
  
 test:
    post:
-     - lein uberjar
+     - lein ring uberwar
     
 deployment:
   staging:
