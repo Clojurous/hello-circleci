@@ -1,10 +1,7 @@
 machine:
   timezone:
     Europe/Moscow    
-
-general:
-  artifacts:
-     - {CIRCLE_PROJECT_REPONAME}/target/ 
+ 
 test:
    override:
      - lein ring uberwar
