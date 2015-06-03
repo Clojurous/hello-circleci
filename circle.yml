@@ -20,6 +20,6 @@ deployment:
           s3_location:
             bucket: circleci-test
             key_pattern: hello-circleci/hello-circleci-{SHORT_COMMIT}-{BUILD_NUM}
-        region: us-east-1
+        region: us-west-2
         deployment_group: staging-instances
         deployment_config: CodeDeployDefault.AllAtOnce     
