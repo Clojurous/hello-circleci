@@ -2,9 +2,15 @@ machine:
   timezone:
     Europe/Moscow
     
+general:
+  artifacts:
+      - $CIRCLE_PROJECT_REPONAME    
+
+    
 deployment:
   staging:
     branch: master
     codedeploy:
       hello-circleci:
         deployment_group: CircleCI-Deployment
+        
