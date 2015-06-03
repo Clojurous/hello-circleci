@@ -1,11 +1,10 @@
 machine:
   timezone:
-    Europe/Moscow
-    
- test:
+    Europe/Moscow    
+ 
+test:
    post:
      - lein uberjar
-
     
 deployment:
   staging:
