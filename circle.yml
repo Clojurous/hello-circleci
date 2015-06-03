@@ -2,9 +2,9 @@ machine:
   timezone:
     Europe/Moscow
     
-general:
-  artifacts:
-      - $CIRCLE_PROJECT_REPONAME    
+ test:
+   post:
+     - lein uberjar
 
     
 deployment:
