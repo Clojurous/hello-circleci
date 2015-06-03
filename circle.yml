@@ -6,7 +6,7 @@ general:
   artifacts:
      - $CIRCLE_PROJECT_REPONAME/target/ 
 test:
-   overridde:
+   override:
      - lein ring uberwar
 
 deployment:
