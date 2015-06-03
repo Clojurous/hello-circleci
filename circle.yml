@@ -5,6 +5,7 @@ machine:
 test:
    post:
      - lein ring uberwar
+     - cp $CIRCLE_PROJECT_REPONAME/target/*war $CIRCLE_ARTIFACTS
     
 deployment:
   staging:
