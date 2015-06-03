@@ -1,14 +1,15 @@
 machine:
   timezone:
     Europe/Moscow    
- 
+
+general:
+  artifacts:
+     - $CIRCLE_PROJECT_REPONAME/target/ 
 test:
-   post:
+   overridde:
      - lein ring uberwar
-    
+
 deployment:
-  pre:
-     - cp $CIRCLE_PROJECT_REPONAME/target/*war $CIRCLE_ARTIFACTS
   staging:
     branch: master
     codedeploy:
