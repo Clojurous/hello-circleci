@@ -4,7 +4,7 @@ machine:
 
 general:
   artifacts:
-     - $CIRCLE_PROJECT_REPONAME/target/ 
+     - {CIRCLE_PROJECT_REPONAME}/target/ 
 test:
    override:
      - lein ring uberwar
@@ -19,7 +19,7 @@ deployment:
           revision_type: S3
           s3_location:
             bucket: circleci-test
-            key_pattern: hello-circleci/hello-circleci-{SHORT_COMMIT}-{BUILD_NUM}
+            key_pattern: hello-circleci/hello-circleci-{SHORT_COMMIT}-{BUILD_NUM}.war
         region: us-west-2
         deployment_group: staging-instances
         deployment_config: CodeDeployDefault.AllAtOnce     
