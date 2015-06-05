@@ -22,7 +22,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: target/clj-west-0.0.1-SNAPSHOT-standalone.war
+  - source: clj-west-0.0.1-SNAPSHOT-standalone.war
     destination: /home/ec2-user/exp/apache-tomcat-8.0.23/webapps/ROOT/
 # - source:
 #   destination:
