@@ -5,15 +5,14 @@ machine:
 test:
    override:
      - lein ring uberwar
-
-deployment:
-  pre:
+   post:
     - rm -rf $CIRCLE_PROJECT_REPONAME/src
     - rm -rf $CIRCLE_PROJECT_REPONAME/project.clj
     - rm -rf $CIRCLE_PROJECT_REPONAME/README.md
     - rm -rf $CIRCLE_PROJECT_REPONAME/.git*
     - rm -rf $CIRCLE_PROJECT_REPONAME/circle.yml
-              
+
+deployment:            
   staging:
     branch: master
     codedeploy:
