@@ -6,18 +6,17 @@ test:
    override:
      - lein ring uberwar
    post:
-    - rm -rf $CIRCLE_PROJECT_REPONAME/src
-    - rm -rf $CIRCLE_PROJECT_REPONAME/project.clj
-    - rm -rf $CIRCLE_PROJECT_REPONAME/README.md
-    - rm -rf $CIRCLE_PROJECT_REPONAME/.git*
-    - rm -rf $CIRCLE_PROJECT_REPONAME/circle.yml
-
+     - mkdir -p bundle/scripts
+     - cp target/clj-west-0.0.1-SNAPSHOT-standalone.war bundle
+     - cp appspec.yml bundle
+     - cp scripts/* bundle/scripts
+     
 deployment:            
   staging:
     branch: master
     codedeploy:
       hello-circleci:
-        application_root: /
+        application_root: /bundle
         revision_location:
           revision_type: S3
           s3_location:
