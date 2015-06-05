@@ -22,10 +22,10 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: 
-    destination:
-  - source:
-    destination:
+  - source: target/clj-west-0.0.1-SNAPSHOT-standalone.war
+    destination: /home/ec2-user/exp/apache-tomcat-8.0.23/webapps/ROOT/
+# - source:
+#   destination:
 # For deployments to Amazon Linux and Ubuntu Server instances,
 #   you can specify a "permissions" 
 #   section here that describes special permissions to apply to the files 
@@ -87,37 +87,37 @@ hooks:
 #      runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  BeforeInstall:
-    - location:  
-      timeout:
-      runas: 
-    - location: 
-      timeout:
-      runas:
+##  BeforeInstall:
+#    - location:  
+#      timeout:
+#      runas: 
+#    - location: 
+#      timeout:
+#      runas:
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  AfterInstall:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+##  AfterInstall:
+#    - location:     
+#      timeout: 
+#      runas:
+#    - location: 
+#      timeout:
+#      runas:
 # During the ApplicationInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  ApplicationStart:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+##  ApplicationStart:
+#    - location:     
+#      timeout: 
+#      runas:
+#    - location: 
+#      timeout:
+#     runas:
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  ValidateService:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+##  ValidateService:
+#    - location:     
+#      timeout: 
+#      runas:
+#    - location: 
+#      timeout:
+#     runas:
