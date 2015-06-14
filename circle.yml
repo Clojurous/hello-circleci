@@ -20,8 +20,8 @@ deployment:
         revision_location:
           revision_type: S3
           s3_location:
-            bucket: circleci-test
-            key_pattern: hello-circleci/hello-circleci-{SHORT_COMMIT}-{BUILD_NUM}.zip
+            bucket: circle-releases
+            key_pattern: hello-circle/hello-circleci-{SHORT_COMMIT}-{BUILD_NUM}.zip
         region: us-west-2
         deployment_group: CircleCI-Deployment
         deployment_config: CodeDeployDefault.OneAtATime
